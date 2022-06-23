@@ -7,28 +7,28 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 */
 
 const resultParagraph = document.getElementById('result');
-let word = 'FRIZZ';
 let content = '';
 
 // Imposto il ciclo da 1 a 100
 for (let i = 1; i <= 100; i++) {
-     console.log(i)
-     content += ` ${i}`;
+    let content1 = ` ${i}`;
 
     // I multipli di 3 e di 5 stampano FrizzBuzz
     if ((i % 3 == 0) && (i % 5 == 0)) {
-        content += ` FrizzBuzz`;
+        content1 = ` FrizzBuzz`;
     } else {
         // I multipli di 3 stampano FRIZZ
         if (i % 3 == 0) {
-            content += ` FRIZZ`;
+            content1 = ` FRIZZ`;
         }
 
         // I multipli di 5 stampano BUZZ
         if (i % 5 == 0) {
-            content += ` BUZZ`;
+            content1 = ` BUZZ`;
         }
     }
+    content += ` ${content1}`;
+    console.log(i)
 }
  
 resultParagraph.innerHTML = content;
